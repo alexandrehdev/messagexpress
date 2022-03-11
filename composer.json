@@ -1,0 +1,20 @@
+{
+    "name": "express/mymail",
+    "description": "project that you can send email to someone quickly",
+    "type": "project",
+    "require": {
+        "phpmailer/phpmailer": "dev-master"
+    },
+    "autoload": {
+        "psr-4": {
+            "Express\\Mymail\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "alexandre",
+            "email": "hallyssonrdev@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev"
+}
