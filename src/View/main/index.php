@@ -18,21 +18,34 @@
   <link rel="stylesheet" href="css/elements.css">
 </head>
 <body>
+  <header>
+    <div class="header-content">
+    <div class="main-title">
+        <h1>MailExpress</h1>
+    </div>
+    <div class="info">
+        <span>Info</span>
+        <span>Github</span>
+    </div>
+  </div>
+  </header>
   <div class="form-content">
     <form class="main-form" action="<?= $_SERVER['PHP_SELF'] ?>" method="POST">
       <div class="field">
-        <input type="text" name="recipient" value="" placeholder="Recipient Email">
+        <input type="text" name="recipient" autocomplete="off" placeholder="Recipient Email">
       </div>
       <div class="field">
-        <input type="text" name="subject" value="" placeholder="Subject">
+        <input type="text" name="subject" autocomplete="off" placeholder="Subject">
       </div>
       <div class="field">
         <textarea rows="8" name="body_email" name="body" cols="80" placeholder="Message"></textarea>
       </div>
       <div class="field">
-        <input type="submit" name="" value="Send">
+        <input type="submit" value="Send">
       </div>
     </form>
   </div>
+    
+  <script type="text/javascript" src="js/script.js"></script>
 </body>
 </html>
