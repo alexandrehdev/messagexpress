@@ -11,8 +11,7 @@ class Mail extends GetData
   }
 
   public function validateField(){
-    if(empty($this->getSubjectMail()) && empty($this->getMessageMail()) ):
-      echo "Fields are empty";
+    if(empty($this->getSubjectMail()) && empty($this->getMessageMail())):
     else:
       (new MailModel())->sendMail();
     endif;

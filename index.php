@@ -4,4 +4,5 @@
   use Express\Mymail\View\Route;
 
   Route::redirect("main");
+
 ?>
