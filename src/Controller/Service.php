@@ -12,7 +12,12 @@ class Service
 
     public static function sendMessage(){
       $builder = new Builder;  
-      echo $builder->getRecipient();
+      $mail = new Mail;
+      $mail->sendMail(
+          $builder->getRecipient(),
+          $builder->getSubject(),
+          $builder->getMessage()
+      );
     }
 
 

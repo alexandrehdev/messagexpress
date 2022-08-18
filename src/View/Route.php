@@ -3,6 +3,7 @@
     
   
 class Route{
+
   public static $routes = [];
 
   public static function redirect(string $path, callable $callback){

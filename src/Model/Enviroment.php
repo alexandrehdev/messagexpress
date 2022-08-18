@@ -1,5 +1,5 @@
 <?php
-namespace Express\Mymail\Controller;
+namespace Express\Mymail\Model;
 
 class Enviroment{
 
@@ -7,15 +7,19 @@ class Enviroment{
     public static function load($dir){
       $rootFolder = $_SERVER["DOCUMENT_ROOT"];
       $pathEnv =  "/.env";
-      $lines = (file_exists($rootFolder . $pathEnv)) ? file($rootFolder . $pathEnv) : null;
+
+      if(file_exists($rootFolder . $pathEnv)){
+        $lines = file($rootFolder . $pathEnv); 
+      }else{
+          return ".env not found";
+      }
 
       foreach($lines as $line){
          putenv(trim($line));
       }
 
       return ".env file 200";
-
-      continue;
-     }
  }
+
+}
     
