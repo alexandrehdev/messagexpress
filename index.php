@@ -1,8 +1,12 @@
 <?php
   require_once("vendor/autoload.php");
 
-  use Express\Mymail\View\Route;
+  include_once("web/route.php");
+  use Express\Mymail\Model\Enviroment;
 
-  Route::redirect("main");
+  Enviroment::load(__DIR__);
 
-?>
+  /* setting route */ 
+  /* echo Home::getHome(); */
+
+
