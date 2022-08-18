@@ -5,35 +5,34 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
 
-class Mail extends MailController
+class Mail  
 {
   public $mail;
 
   function __construct()
   {
     parent::__construct();
-    $this->mail = new PHPMailer();
+      $this->mail = new PHPMailer();
   }
 
   public function sendMail(){
-    // try {
-      //Server settings
+     try {
         $this->mail->SMTPDebug = SMTP::DEBUG_SERVER;                      //Enable verbose debug output
         $this->mail->isSMTP();                                            //Send using SMTP
-        $this->mail->Host       = 'smtp.gmail.com';  //smtp.live.com             //Set the SMTP server to send through
-        $this->mail->SMTPAuth   = true;
+        $this->mail->Host = 'smtp.gmail.com';  //smtp.live.com             //Set the SMTP server to send through
+        $this->mail->SMTPAuth = true;
         $this->mail->SMTPDebug = 0;
         // $this->mail->SMTPSecure = 'tls';                                //Enable SMTP authentication
-        $this->mail->Username   = '';              //SMTP username
-        $this->mail->Password   = '';                               //SMTP password
+        $this->mail->Username = "alexandrehldev@gmail.com";              //SMTP username
+        $this->mail->Password = '$this->getAlexandre()';                               //SMTP password
         // $this->mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
-        $this->mail->Port       = 587;     //465                               //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
+        $this->mail->Port  = 587;     //465                               //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
       //Recipients
         $this->mail->setFrom('', 'Confirmação de Email');
         $this->mail->addAddress($this->getRecipientMail());     //Add a recipient
         // $this->mail->addAddress('ellen@example.com');               //Name is optional
-        // $this->mail->addReplyTo('hallyssonrdev@gmail.com', 'Information');
+        // $this->mail->addReplyTo('alexandrehldev@gmail.com', 'Information');
 
       //Content
         $this->mail->isHTML(true);                                  //Set email format to HTML
@@ -45,10 +44,9 @@ class Mail extends MailController
           echo "<script>alert('Email has been sent')</script>";
         endif;
 
-    // } catch (Exception $e) {
-    //   echo "Message could not be sent. Mailer Error: {$this->mail->ErrorInfo}";
-    // }
+    }catch (Exception $e) {
+      echo "Message could not be sent. Mailer Error: {$this->mail->ErrorInfo}";
+    }
   }
 }
 
- ?>

@@ -1,8 +1,9 @@
 <?php
   require_once("vendor/autoload.php");
+  include_once("web/route.php");
+  use Express\Mymail\Controller\Home;
 
-  use Express\Mymail\View\Route;
+  /* setting route */ 
+  /* echo Home::getHome(); */
 
-  Route::redirect("main");
 
-?>

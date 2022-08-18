@@ -1,11 +1,26 @@
 <?php
-namespace Express\Mymail\View;
+ namespace Express\Mymail\View;
+    
+  
+class Route{
+  public static $routes = [];
 
-class Route
-{
-  public static function redirect($folder){
-    header("Location: src/View/{$folder}/index.php");
+  public static function redirect(string $path, callable $callback){
+     $currenturi = $_SERVER['REQUEST_URI'];
+     self::$routes[$path] = $callback;
+
+     foreach(self::$routes as $dir => $callback){
+         if( $dir !== $currenturi){
+             continue;
+         }else{
+            array_shift(self::$routes);
+            $callback();
+            array_shift(self::$routes);
+        }
+     }
+
   }
-}
 
- ?>
+
+}
+ 

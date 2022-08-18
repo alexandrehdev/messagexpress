@@ -1,0 +1,52 @@
+#main-header{
+    background: var(--main-red);
+    color: var(--main-snow);
+    text-align: left;
+    padding-left: 10px;
+    font-size:50px;
+}
+form{
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    position: absolute;
+    top: 30%;
+    right: 2%;
+    background: var(--main-blue);
+    height: 100%;
+    width: 30%;
+    padding: 20px;
+}
+form .field{
+    padding: 10px;
+}
+
+form .field input[type="text"]{
+    outline: none;
+    border-radius: 5px;
+    border: transparent solid 1px;
+    padding: 10px;
+    width: 530px;
+}
+form .field input[type="submit"]{
+
+    color: var(--main-snow);
+    background: var(--main-green);
+    padding: 15px;
+    border: transparent 1px solid;
+    border-radius: 5px;
+}
+
+form .field textarea{
+    height:  200px;
+    width: 550px;
+    resize: none;
+}
+form .field input[type="text"]::placeholder{
+  font-family: 'Secular One', sans-serif;
+  padding: 10px;
+
+}
+form .field textarea::placeholder{
+  font-family: 'Secular One', sans-serif;
+  padding: 10px;
+}

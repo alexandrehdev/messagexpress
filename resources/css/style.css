@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
+
+html,body{
+  margin: 0;
+  padding: 0;
+  font-family: 'Secular One', sans-serif;
+  background: url('../img/wallpaperflare.com_wallpaper.jpg');
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
