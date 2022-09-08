@@ -1,15 +1,17 @@
-<form action="/sendMessage" method="post">
-   <div class="field">
-     <input type="text" name="recipient" placeholder="Recipient" autocomplete="off"/>
-   </div>
-   <div class="field">
-     <input type="text" name="subject" placeholder="Subject" autocomplete="off"/>
-   </div>
-   <div class="field">
-     <textarea type="text" placeholder="Your Email Here" name="message" autocomplete="off" ></textarea>
-   </div>
-   <div class="field">
-       <input id="sendBtn" type="submit" name="" value="Send Message" />
-   </div>
-</form>
+<div class="container">
+    <form action="/message" method="post" name="formMail" id="myForm">
+        <div class="field">
+            <input type="text" name="recipient" placeholder="Recipient" autocomplete="off"/>
+        </div>
+        <div class="field">
+            <input type="text" name="subject" placeholder="Subject" autocomplete="off"/>
+        </div>
+        <div class="field">
+            <textarea type="text" placeholder="Your Email Here" name="message" autocomplete="off" ></textarea>
+        </div>
+        <div class="field">
+            <input id="sendBtn" type="submit" name="" value="Mail" />
+        </div>
+    </form>
+</div>
 

@@ -7,17 +7,11 @@ use Express\Mymail\Controller\Home;
 class Service 
 {
     public static function callHome(){
-        echo Home::getHome();
+        echo Home::getHomePage();
     }
 
     public static function sendMessage(){
-      $builder = new Builder;  
-      $mail = new Mail;
-      $mail->sendMail(
-          $builder->getRecipient(),
-          $builder->getSubject(),
-          $builder->getMessage()
-      );
+        echo Home::getSuccessPage();
     }
 
 

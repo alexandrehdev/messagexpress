@@ -7,7 +7,7 @@ Route::redirect("/", function(){
     Service::callHome();
 });
 
-Route::redirect("/sendMessage", function(){
+Route::redirect("/message", function(){
     Service::sendMessage();
 });
   

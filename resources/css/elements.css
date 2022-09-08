@@ -1,52 +1,109 @@
-#main-header{
-    background: var(--main-red);
-    color: var(--main-snow);
-    text-align: left;
-    padding-left: 10px;
-    font-size:50px;
+.header{
+    display: flex;
+    justify-content:center;
+    background: var(--main-black);
 }
-form{
-    border-top-right-radius: 10px;
-    border-top-left-radius: 10px;
-    position: absolute;
-    top: 30%;
-    right: 2%;
-    background: var(--main-blue);
-    height: 100%;
-    width: 30%;
-    padding: 20px;
+
+.header img{
+    height: 100px;
 }
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2%;
+    height: auto;
+    width:100%;
+}
+
 form .field{
-    padding: 10px;
+    margin: 15px;
 }
 
-form .field input[type="text"]{
-    outline: none;
-    border-radius: 5px;
-    border: transparent solid 1px;
+form .field input{
+    width: 97%;
     padding: 10px;
-    width: 530px;
+    border-radius: 5px;
+    outline:none;
+    border: 1px solid transparent;
 }
+form .field input::placeholder{
+  font-family: 'Antonio', sans-serif;
+  font-size: 0.5rem;
+  padding: 5px;
+}
+
 form .field input[type="submit"]{
+    background: var(--main-purple);
+    outline:none;
+    border: 1px solid transparent;
+    color: var(--main-white);
+    cursor: pointer;
+    margin-left:10px;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-family: 'Roboto Condensed', sans-serif;
+}
 
-    color: var(--main-snow);
-    background: var(--main-green);
-    padding: 15px;
-    border: transparent 1px solid;
-    border-radius: 5px;
+form .field input[type="submit"]:hover{
+    background: var(--main-purple);
 }
 
 form .field textarea{
-    height:  200px;
-    width: 550px;
     resize: none;
+    width: 600px;
+    outline: none;
+    border: 1px solid transparent;
+    height: 300px;
+    border-radius: 5px;
+    padding: 5px;
 }
-form .field input[type="text"]::placeholder{
-  font-family: 'Secular One', sans-serif;
-  padding: 10px;
 
-}
 form .field textarea::placeholder{
-  font-family: 'Secular One', sans-serif;
-  padding: 10px;
+  font-family: 'Antonio', sans-serif;
+  font-size: 0.5rem;
+  padding: 5px;
+}
+
+.error{
+    animation: shake 0.2s ease-in-out 0s 2;
+    box-shadow: 0 0 0.5em var(--main-red);
+}
+.message-svg{
+    display: flex;
+    justify-content: center;
+}
+.message-svg img{
+    height: 250px;
+    margin-top: 55px;
+}
+.message-response h1{
+    color: var(--main-green);
+    text-align:center;
+    font-family: 'Kanit', sans-serif;
+    text-transform: uppercase;
+    margin-top: 50px;
+}
+.message-response span{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    color: var(--main-white);
+}
+.goback{
+    display: flex;
+    justify-content:center;
+}
+.goback a{
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: var(--main-purple);
+    background: var(--main-white);
+    padding: 10px 70px;
+    border-radius: 5px;
+}
+.goback a i{
+    font-size: 50px;
 }
