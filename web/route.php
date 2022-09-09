@@ -14,4 +14,3 @@ Route::redirect("/send", function(){
 Route::redirect("/success", function(){
     Service::mailSent();
 }); 
-
