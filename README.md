@@ -8,6 +8,7 @@
 # Status
 - Working? Yes (I hope so)
 - Responsive? No
+- URL Control? Not yet, I'm still working on it
 
 [Demo](http://messagexpress.infinityfreeapp.com)
 
