@@ -16,8 +16,8 @@ class Mail{
            $mail->Host       = 'smtp.gmail.com';                     
            $mail->SMTPAuth   = true;                                   
            /* email server */
-           $mail->Username   = 'servicemessagexpress@gmail.com';                     
-           $mail->Password   = 'xzfkwwaztynlonvv';                            
+           $mail->Username   = '';                     
+           $mail->Password   = '';                            
            $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;          
            $mail->Port       = 465;      
 
@@ -30,7 +30,7 @@ class Mail{
 
        }catch(Exception $e){
            /* echo "Message could not be sent {$e->getMessage()}"; */
-           header("Location: /error");
+           // header("Location: /error");
        }
     }
 }
