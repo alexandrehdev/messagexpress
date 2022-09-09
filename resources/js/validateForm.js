@@ -7,15 +7,14 @@ function validateEmail(mail){
     return valid.test(mail);
 }
 
-btn.onclick = function(e){
-    keys.forEach(function(key){
+ btn.addEventListener("click", function(e){
+   keys.forEach(function(key){
         if(form[key].value.length === 0){
             e.preventDefault();
             form[key].classList.add('error');
         }else{
             let response = validateEmail(form["recipient"]);
             if(response){
-                console.log("cheguei aqui");
                 document.getElementById("myForm").submit();
             }else{
                 form["recipient"].classList.add('error');
@@ -23,8 +22,7 @@ btn.onclick = function(e){
             }
         }
     });
-}
-
+});
     
 
 
