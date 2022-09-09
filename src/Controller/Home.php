@@ -15,16 +15,37 @@ class Home{
 	   return $elements;
    }
 
-   public static function getHome() {
-      $nameElement = self::nameElements();
-      $content = View::getElements();
+  public static function getHomePage() {
+     $nameElement = self::nameElements();
+     $content = View::getElements();
 
-      return View::render("index", [
-          $nameElement[0] => $content[0],
+     return View::render("index", [
           $nameElement[1] => $content[1],
+          $nameElement[4] => $content[4],
           $nameElement[2] => $content[2]
       ]);
 
    }
 
+   public static function getSuccessPage() {
+      $nameElement = self::nameElements();
+      $content = View::getElements();
+
+      return View::render("index", [
+          $nameElement[1] => $content[1],
+          $nameElement[4] => $content[0],
+          $nameElement[2] => $content[2]
+      ]);
+   }
+
+   public static function getErrorPage(){
+      $nameElement = self::nameElements();
+      $content = View::getElements();
+
+      return View::render("index", [
+         $nameElement[1] => $content[1],
+         $nameElement[4] => $content[3],
+         $nameElement[2] => $content[2]
+      ]);    
+   }
 }

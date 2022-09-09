@@ -1,25 +1,26 @@
 <?php
 namespace Express\Mymail\Controller;
-use Express\Mymail\Model\Mail;
-use Express\Mymail\Controller\Builder;
 use Express\Mymail\Controller\Home;
+use Express\Mymail\Controller\Postman;
 
 class Service 
 {
-    public static function callHome(){
-        echo Home::getHome();
+    public static function mainPage(){
+        echo Home::getHomePage();
     }
 
     public static function sendMessage(){
-      $builder = new Builder;  
-      $mail = new Mail;
-      $mail->sendMail(
-          $builder->getRecipient(),
-          $builder->getSubject(),
-          $builder->getMessage()
-      );
+        $postman = new Postman();
+        $postman->postMail();
     }
 
+    public static function mailSent(){
+        echo Home::getSuccessPage();
+    }
+
+    public static function errorPage(){
+        echo Home::getErrorPage();
+    }
 
 
 }
