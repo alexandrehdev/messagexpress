@@ -16,8 +16,8 @@ class Mail{
            $mail->Host       = 'smtp.gmail.com';                     
            $mail->SMTPAuth   = true;                                   
            /* email server */
-           $mail->Username   = 'servicemessagexpress@gmail.com';                     
-           $mail->Password   = 'oyjqnsjphiutwflb';                            
+           $mail->Username   = '';                     
+           $mail->Password   = '';                            
            $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;          
            $mail->Port       = 465;      
 
