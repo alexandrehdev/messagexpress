@@ -1,4 +1,4 @@
-# MailExpress
+# MessagExpress
 <img src="https://i.ibb.co/hBVHCpC/messagexpress.png"/>
 
 # Description
