@@ -1,4 +1,4 @@
-let keys = ["recipient", "subject","message"];
+let keys = ["username","title","userEmail","recipient", "subject","message"];
 let btn = document.getElementById("sendBtn");
 let form = document.forms["formMail"];
 

@@ -19,9 +19,9 @@ class Home{
      $nameElement = self::nameElements();
      $content = View::getElements();
 
-      return View::render("index", [
+     return View::render("index", [
           $nameElement[1] => $content[1],
-          $nameElement[3] => $content[3],
+          $nameElement[4] => $content[4],
           $nameElement[2] => $content[2]
       ]);
 
@@ -33,9 +33,19 @@ class Home{
 
       return View::render("index", [
           $nameElement[1] => $content[1],
-          $nameElement[3] => $content[0],
+          $nameElement[4] => $content[0],
           $nameElement[2] => $content[2]
       ]);
+   }
 
+   public static function getErrorPage(){
+      $nameElement = self::nameElements();
+      $content = View::getElements();
+
+      return View::render("index", [
+         $nameElement[1] => $content[1],
+         $nameElement[4] => $content[3],
+         $nameElement[2] => $content[2]
+      ]);    
    }
 }

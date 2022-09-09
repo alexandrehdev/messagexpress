@@ -107,3 +107,28 @@ form .field textarea::placeholder{
 .goback a i{
     font-size: 50px;
 }
+
+.errorImage{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.errorImage img{
+    height: 250px;
+    margin-top: 55px;
+}
+
+.errorDescription span{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    color: var(--main-white);
+}
+#issueLink{
+    text-decoration:none;
+    color: var(--main-green);
+    margin-left: 2px;
+    margin-right: 2px;
+}

@@ -1,5 +1,14 @@
 <div class="container">
-    <form action="/message" method="post" name="formMail" id="myForm">
+    <form action="/send" method="post" name="formMail" id="myForm">
+        <div class="field">
+            <input type="text" name="username" placeholder="Username" autocomplete="off"/>
+        </div>
+        <div class="field">
+            <input type="text" name="title" placeholder="Title" autocomplete="off"/>
+        </div>
+        <div class="field">
+            <input type="text" name="userEmail" placeholder="Your Email" autocomplete="off"/>
+        </div>
         <div class="field">
             <input type="text" name="recipient" placeholder="Recipient" autocomplete="off"/>
         </div>
@@ -10,7 +19,7 @@
             <textarea type="text" placeholder="Your Email Here" name="message" autocomplete="off" ></textarea>
         </div>
         <div class="field">
-            <input id="sendBtn" type="submit" name="" value="Mail" />
+            <input id="sendBtn" type="submit" name="" value="Send Email" />
         </div>
     </form>
 </div>
