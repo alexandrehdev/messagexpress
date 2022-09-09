@@ -33,7 +33,7 @@ class View{
 	  return $files;
 	}
 
-    public static function render(string $view, array $vars) :mixed{
+    public static function render(string $view, array $vars){
         $contentView = self::getContentView($view);
         $keys = array_keys($vars);
 	    $keys = array_map(function($item){
