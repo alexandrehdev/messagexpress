@@ -6,7 +6,6 @@ html,body{
   margin: 0;
   padding: 0;
   font-family: 'Antonio', sans-serif;
-  overflow: hidden;
   background: #8E2DE2;  
   background: -webkit-linear-gradient(to right, #4A00E0, #8E2DE2);  
   background: linear-gradient(to right, #4A00E0, #8E2DE2); 
